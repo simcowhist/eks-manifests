@@ -1,0 +1,24 @@
+Deployment:
+  name: myapp
+  app: myapp
+  replicas: 2
+  image: 930354804502.dkr.ecr.us-east-1.amazonaws.com/simcowhist
+  containerPort: 80
+hpa:
+  name: hpa
+  min_size: 2
+  max_size: 4
+  averageUtilization: 40
+  scale_down_size: 2
+  scale_up_size: 4
+  scale_down_period: 15
+  scale_up_period: 15
+Ingress:
+  name: ingress
+  path: /
+  pathType: prefix
+LoadBalancer:
+  name: LoadBalancer
+  protocol: TCP
+  targetPort: 80
+  port: 80
