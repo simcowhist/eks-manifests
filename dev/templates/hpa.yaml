@@ -4,9 +4,9 @@ metadata:
   name: {{ .Values.hpa.name }}
 spec:
   scaleTargetRef:
-  apiVersion: apps/v1
-  kind: Deployment
-  name: {{ .Values.Deployment.name }}
+    apiVersion: apps/v1
+    kind: Deployment
+    name: {{ .Values.Deployment.name }}
   minReplicas: {{ .Values.hpa.min_size }}
   maxReplicas: {{ .Values.hpa.max_size }}
   metrics:
@@ -16,14 +16,3 @@ spec:
       target:
         type: Utilization
         averageUtilization: {{ .Values.hpa.averageUtilization }}
-  behavior:
-    scaleDown:
-      policies:
-      - type: Pods
-        value: {{ .Values.hpa.scale_down_size }}
-        periodSeconds: {{ .Values.hpa.scale_down_period }}
-    scaleUp:
-      policies:
-      - type: Pods
-        value: {{ .Values.hpa.scale_up_size}}
-        periodSeconds: {{ .Values.hpa.scale_up_period }}
