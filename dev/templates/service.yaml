@@ -4,7 +4,7 @@ metadata:
   name: { .Values.LoadBalancer.name }
 spec:
   selector:
-    app: {{ .Values.deployment.app }}
+    app: {{ .Values.Deployment.app }}
   ports:
     - protocol: {{ .Values.LoadBalancer.protocol }}
       port: {{ .Values.LoadBalancer.port }}
