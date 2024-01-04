@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: {{ .Values.Ingress.name }}
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    kubernetes.io/ingress.class: alb
 spec:
   ingressClassName: {{ .Values.Ingress.name }}
   rules:
