@@ -14,7 +14,7 @@ hpa:
   scale_down_period: 15
   scale_up_period: 15
 Ingress:
-  name: ingress
+  name: alb
   path: /
   pathType: Prefix
 LoadBalancer:

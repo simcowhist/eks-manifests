@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: {{ .Values.Ingress.name }}
   annotations:
-    kubernetes.io/ingress.class: alb
+    kubernetes.io/ingress.class: {{ .Values.Ingress.name }}
 spec:
   ingressClassName: {{ .Values.Ingress.name }}
   rules:
