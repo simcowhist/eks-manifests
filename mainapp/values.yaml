@@ -1,6 +1,6 @@
 applications:
   - name: myapp
-    namespace: myapp
+    namespace: argocd
     project: default
     source:
       repoUrl: https://github.com/simcowhist/eks-manifests.git
