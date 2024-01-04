@@ -3,7 +3,7 @@ Deployment:
   app: myapp
   replicas: 2
   image: 930354804502.dkr.ecr.us-east-1.amazonaws.com/simcowhist
-  containerPort: 80
+  port: 80
 hpa:
   name: hpa
   min_size: 2
