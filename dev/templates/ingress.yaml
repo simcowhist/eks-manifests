@@ -1,16 +1,16 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: {{ .Values.ingress.name }}
+  name: {{ .Values.Ingress.name }}
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
-  ingressClassName: {{ .Values.ingress.name }}
+  ingressClassName: {{ .Values.Ingress.name }}
   rules:
   - http:
       paths:
-      - path: {{ .Values.ingress.path }}
-        pathType: {{ .Values.ingress.pathType }}
+      - path: {{ .Values.Ingress.path }}
+        pathType: {{ .Values.Ingress.pathType }}
         backend:
           service:
             name: {{ .Values.LoadBalancer.name }}
