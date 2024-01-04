@@ -16,7 +16,7 @@ hpa:
 Ingress:
   name: ingress
   path: /
-  pathType: prefix
+  pathType: Prefix
 LoadBalancer:
   name: LoadBalancer
   protocol: TCP
