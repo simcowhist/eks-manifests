@@ -8,5 +8,5 @@ spec:
   ports:
     - protocol: {{ .Values.LoadBalancer.protocol }}
       port: {{ .Values.LoadBalancer.port }}
-      targetPort: {{ .Values.Loadbalancer.targetPort }}
+      targetPort: {{ .Values.LoadBalancer.targetPort }}
   type: LoadBalancer
