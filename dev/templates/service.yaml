@@ -1,7 +1,7 @@
 apiVersion: v2
 kind: Service
 metadata:
-  name: { .Values.LoadBalancer.name }
+  name: {{ .Values.LoadBalancer.name }}
 spec:
   selector:
     app: {{ .Values.Deployment.app }}
