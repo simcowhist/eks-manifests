@@ -15,34 +15,34 @@ applications:
       selfHeal: true
       prune: true
   
-  # - name: secrets-store-csi-driver
-  #   namespace: kube-system
-  #   project: default
-  #   source:
-  #     repoUrl: https://github.com/kubernetes-sigs/secrets-store-csi-driver.git
-  #     targetRevision: 1.4.0
-  #     path: charts/secrets-store-csi-driver
-  #   destination:
-  #     server: https://kubernetes.default.svc
-  #   syncPolicy:
-  #     syncOptions:
-  #     - CreateNamespace=true
-  #   automated:
-  #     selfHeal: true
-  #     prune: true
+  - name: secrets-store-csi-driver
+    namespace: kube-system
+    project: default
+    source:
+      repoUrl: https://github.com/kubernetes-sigs/secrets-store-csi-driver.git
+      targetRevision: 1.4.0
+      path: charts/secrets-store-csi-driver
+    destination:
+      server: https://kubernetes.default.svc
+    syncPolicy:
+      syncOptions:
+      - CreateNamespace=true
+    automated:
+      selfHeal: true
+      prune: true
 
-  # - name: secrets-store-csi-driver-provider-aws
-  #   namespace: kube-system
-  #   project: default
-  #   source:
-  #     repoUrl: https://github.com/aws/secrets-store-csi-driver-provider-aws.git
-  #     targetRevision: 0.3.5
-  #     path: charts/secrets-store-csi-driver-provider-aws
-  #   destination:
-  #     server: https://kubernetes.default.svc
-  #   syncPolicy:
-  #     syncOptions:
-  #     - CreateNamespace=true
-  #   automated:
-  #     selfHeal: true
-  #     prune: true    
+  - name: secrets-store-csi-driver-provider-aws
+    namespace: kube-system
+    project: default
+    source:
+      repoUrl: https://github.com/aws/secrets-store-csi-driver-provider-aws.git
+      targetRevision: 0.3.5
+      path: charts/secrets-store-csi-driver-provider-aws
+    destination:
+      server: https://kubernetes.default.svc
+    syncPolicy:
+      syncOptions:
+      - CreateNamespace=true
+    automated:
+      selfHeal: true
+      prune: true    
